@@ -1,0 +1,129 @@
+D:\Pessoal\Projects\ISI\Source\ISI-TP1\ISI-TP1\bin\Debug\ISI-TP1.exe.config
+D:\Pessoal\Projects\ISI\Source\ISI-TP1\ISI-TP1\bin\Debug\ISI-TP1.exe
+D:\Pessoal\Projects\ISI\Source\ISI-TP1\ISI-TP1\bin\Debug\ISI-TP1.pdb
+D:\Pessoal\Projects\ISI\Source\ISI-TP1\ISI-TP1\obj\Debug\ISI-TP1.csproj.AssemblyReference.cache
+D:\Pessoal\Projects\ISI\Source\ISI-TP1\ISI-TP1\obj\Debug\ISI-TP1.csproj.SuggestedBindingRedirects.cache
+D:\Pessoal\Projects\ISI\Source\ISI-TP1\ISI-TP1\obj\Debug\ISI-TP1.csproj.CoreCompileInputs.cache
+D:\Pessoal\Projects\ISI\Source\ISI-TP1\ISI-TP1\obj\Debug\ISI-TP1.exe
+D:\Pessoal\Projects\ISI\Source\ISI-TP1\ISI-TP1\obj\Debug\ISI-TP1.pdb
+D:\Pessoal\Projects\ISI\Source\ISI-TP1\ISI-TP1\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Pessoal\Projects\ISI\Source\ISI-TP1\ISI-TP1\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Pessoal\Projects\ISI\Source\ISI-TP1\ISI-TP1\bin\Debug\Microsoft.Extensions.Configuration.dll
+D:\Pessoal\Projects\ISI\Source\ISI-TP1\ISI-TP1\bin\Debug\Microsoft.Extensions.Configuration.FileExtensions.dll
+D:\Pessoal\Projects\ISI\Source\ISI-TP1\ISI-TP1\bin\Debug\Microsoft.Extensions.Configuration.Json.dll
+D:\Pessoal\Projects\ISI\Source\ISI-TP1\ISI-TP1\bin\Debug\Microsoft.Extensions.FileProviders.Abstractions.dll
+D:\Pessoal\Projects\ISI\Source\ISI-TP1\ISI-TP1\bin\Debug\Microsoft.Extensions.FileProviders.Physical.dll
+D:\Pessoal\Projects\ISI\Source\ISI-TP1\ISI-TP1\bin\Debug\Microsoft.Extensions.FileSystemGlobbing.dll
+D:\Pessoal\Projects\ISI\Source\ISI-TP1\ISI-TP1\bin\Debug\Microsoft.Extensions.Primitives.dll
+D:\Pessoal\Projects\ISI\Source\ISI-TP1\ISI-TP1\bin\Debug\System.Buffers.dll
+D:\Pessoal\Projects\ISI\Source\ISI-TP1\ISI-TP1\bin\Debug\System.Memory.dll
+D:\Pessoal\Projects\ISI\Source\ISI-TP1\ISI-TP1\bin\Debug\System.Numerics.Vectors.dll
+D:\Pessoal\Projects\ISI\Source\ISI-TP1\ISI-TP1\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Pessoal\Projects\ISI\Source\ISI-TP1\ISI-TP1\bin\Debug\System.Text.Encodings.Web.dll
+D:\Pessoal\Projects\ISI\Source\ISI-TP1\ISI-TP1\bin\Debug\System.Text.Json.dll
+D:\Pessoal\Projects\ISI\Source\ISI-TP1\ISI-TP1\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\Pessoal\Projects\ISI\Source\ISI-TP1\ISI-TP1\bin\Debug\System.ValueTuple.dll
+D:\Pessoal\Projects\ISI\Source\ISI-TP1\ISI-TP1\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+D:\Pessoal\Projects\ISI\Source\ISI-TP1\ISI-TP1\bin\Debug\Microsoft.Extensions.Configuration.xml
+D:\Pessoal\Projects\ISI\Source\ISI-TP1\ISI-TP1\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.xml
+D:\Pessoal\Projects\ISI\Source\ISI-TP1\ISI-TP1\bin\Debug\Microsoft.Extensions.Configuration.FileExtensions.xml
+D:\Pessoal\Projects\ISI\Source\ISI-TP1\ISI-TP1\bin\Debug\Microsoft.Extensions.Configuration.Json.xml
+D:\Pessoal\Projects\ISI\Source\ISI-TP1\ISI-TP1\bin\Debug\Microsoft.Extensions.FileProviders.Abstractions.xml
+D:\Pessoal\Projects\ISI\Source\ISI-TP1\ISI-TP1\bin\Debug\Microsoft.Extensions.FileProviders.Physical.xml
+D:\Pessoal\Projects\ISI\Source\ISI-TP1\ISI-TP1\bin\Debug\Microsoft.Extensions.FileSystemGlobbing.xml
+D:\Pessoal\Projects\ISI\Source\ISI-TP1\ISI-TP1\bin\Debug\Microsoft.Extensions.Primitives.xml
+D:\Pessoal\Projects\ISI\Source\ISI-TP1\ISI-TP1\bin\Debug\System.Buffers.xml
+D:\Pessoal\Projects\ISI\Source\ISI-TP1\ISI-TP1\bin\Debug\System.Memory.xml
+D:\Pessoal\Projects\ISI\Source\ISI-TP1\ISI-TP1\bin\Debug\System.Numerics.Vectors.xml
+D:\Pessoal\Projects\ISI\Source\ISI-TP1\ISI-TP1\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\Pessoal\Projects\ISI\Source\ISI-TP1\ISI-TP1\bin\Debug\System.Text.Encodings.Web.xml
+D:\Pessoal\Projects\ISI\Source\ISI-TP1\ISI-TP1\bin\Debug\System.Text.Json.xml
+D:\Pessoal\Projects\ISI\Source\ISI-TP1\ISI-TP1\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\Pessoal\Projects\ISI\Source\ISI-TP1\ISI-TP1\bin\Debug\System.ValueTuple.xml
+D:\Pessoal\Projects\ISI\Source\ISI-TP1\ISI-TP1\obj\Debug\ISI-TP1.csproj.CopyComplete
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\ISI-TP1\ISI-TP1\bin\Debug\ISI-TP1.exe.config
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\ISI-TP1\ISI-TP1\bin\Debug\ISI-TP1.exe
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\ISI-TP1\ISI-TP1\bin\Debug\ISI-TP1.pdb
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\ISI-TP1\ISI-TP1\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\ISI-TP1\ISI-TP1\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.dll
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\ISI-TP1\ISI-TP1\bin\Debug\Microsoft.Extensions.Configuration.dll
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\ISI-TP1\ISI-TP1\bin\Debug\Microsoft.Extensions.Configuration.FileExtensions.dll
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\ISI-TP1\ISI-TP1\bin\Debug\Microsoft.Extensions.Configuration.Json.dll
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\ISI-TP1\ISI-TP1\bin\Debug\Microsoft.Extensions.FileProviders.Abstractions.dll
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\ISI-TP1\ISI-TP1\bin\Debug\Microsoft.Extensions.FileProviders.Physical.dll
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\ISI-TP1\ISI-TP1\bin\Debug\Microsoft.Extensions.FileSystemGlobbing.dll
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\ISI-TP1\ISI-TP1\bin\Debug\Microsoft.Extensions.Primitives.dll
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\ISI-TP1\ISI-TP1\bin\Debug\System.Buffers.dll
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\ISI-TP1\ISI-TP1\bin\Debug\System.Memory.dll
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\ISI-TP1\ISI-TP1\bin\Debug\System.Numerics.Vectors.dll
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\ISI-TP1\ISI-TP1\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\ISI-TP1\ISI-TP1\bin\Debug\System.Text.Encodings.Web.dll
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\ISI-TP1\ISI-TP1\bin\Debug\System.Text.Json.dll
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\ISI-TP1\ISI-TP1\bin\Debug\System.Threading.Tasks.Extensions.dll
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\ISI-TP1\ISI-TP1\bin\Debug\System.ValueTuple.dll
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\ISI-TP1\ISI-TP1\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\ISI-TP1\ISI-TP1\bin\Debug\Microsoft.Extensions.Configuration.xml
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\ISI-TP1\ISI-TP1\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.xml
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\ISI-TP1\ISI-TP1\bin\Debug\Microsoft.Extensions.Configuration.FileExtensions.xml
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\ISI-TP1\ISI-TP1\bin\Debug\Microsoft.Extensions.Configuration.Json.xml
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\ISI-TP1\ISI-TP1\bin\Debug\Microsoft.Extensions.FileProviders.Abstractions.xml
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\ISI-TP1\ISI-TP1\bin\Debug\Microsoft.Extensions.FileProviders.Physical.xml
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\ISI-TP1\ISI-TP1\bin\Debug\Microsoft.Extensions.FileSystemGlobbing.xml
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\ISI-TP1\ISI-TP1\bin\Debug\Microsoft.Extensions.Primitives.xml
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\ISI-TP1\ISI-TP1\bin\Debug\System.Buffers.xml
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\ISI-TP1\ISI-TP1\bin\Debug\System.Memory.xml
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\ISI-TP1\ISI-TP1\bin\Debug\System.Numerics.Vectors.xml
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\ISI-TP1\ISI-TP1\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\ISI-TP1\ISI-TP1\bin\Debug\System.Text.Encodings.Web.xml
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\ISI-TP1\ISI-TP1\bin\Debug\System.Text.Json.xml
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\ISI-TP1\ISI-TP1\bin\Debug\System.Threading.Tasks.Extensions.xml
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\ISI-TP1\ISI-TP1\bin\Debug\System.ValueTuple.xml
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\ISI-TP1\ISI-TP1\obj\Debug\ISI-TP1.csproj.AssemblyReference.cache
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\ISI-TP1\ISI-TP1\obj\Debug\ISI-TP1.csproj.SuggestedBindingRedirects.cache
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\ISI-TP1\ISI-TP1\obj\Debug\ISI-TP1.csproj.CoreCompileInputs.cache
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\ISI-TP1\ISI-TP1\obj\Debug\ISI-TP1.csproj.CopyComplete
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\ISI-TP1\ISI-TP1\obj\Debug\ISI-TP1.exe
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\ISI-TP1\ISI-TP1\obj\Debug\ISI-TP1.pdb
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\CSharp\ISI-TP1\bin\Debug\ISI-TP1.exe.config
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\CSharp\ISI-TP1\bin\Debug\ISI-TP1.exe
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\CSharp\ISI-TP1\bin\Debug\ISI-TP1.pdb
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\CSharp\ISI-TP1\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\CSharp\ISI-TP1\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.dll
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\CSharp\ISI-TP1\bin\Debug\Microsoft.Extensions.Configuration.dll
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\CSharp\ISI-TP1\bin\Debug\Microsoft.Extensions.Configuration.FileExtensions.dll
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\CSharp\ISI-TP1\bin\Debug\Microsoft.Extensions.Configuration.Json.dll
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\CSharp\ISI-TP1\bin\Debug\Microsoft.Extensions.FileProviders.Abstractions.dll
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\CSharp\ISI-TP1\bin\Debug\Microsoft.Extensions.FileProviders.Physical.dll
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\CSharp\ISI-TP1\bin\Debug\Microsoft.Extensions.FileSystemGlobbing.dll
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\CSharp\ISI-TP1\bin\Debug\Microsoft.Extensions.Primitives.dll
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\CSharp\ISI-TP1\bin\Debug\System.Buffers.dll
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\CSharp\ISI-TP1\bin\Debug\System.Memory.dll
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\CSharp\ISI-TP1\bin\Debug\System.Numerics.Vectors.dll
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\CSharp\ISI-TP1\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\CSharp\ISI-TP1\bin\Debug\System.Text.Encodings.Web.dll
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\CSharp\ISI-TP1\bin\Debug\System.Text.Json.dll
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\CSharp\ISI-TP1\bin\Debug\System.Threading.Tasks.Extensions.dll
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\CSharp\ISI-TP1\bin\Debug\System.ValueTuple.dll
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\CSharp\ISI-TP1\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\CSharp\ISI-TP1\bin\Debug\Microsoft.Extensions.Configuration.xml
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\CSharp\ISI-TP1\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.xml
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\CSharp\ISI-TP1\bin\Debug\Microsoft.Extensions.Configuration.FileExtensions.xml
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\CSharp\ISI-TP1\bin\Debug\Microsoft.Extensions.Configuration.Json.xml
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\CSharp\ISI-TP1\bin\Debug\Microsoft.Extensions.FileProviders.Abstractions.xml
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\CSharp\ISI-TP1\bin\Debug\Microsoft.Extensions.FileProviders.Physical.xml
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\CSharp\ISI-TP1\bin\Debug\Microsoft.Extensions.FileSystemGlobbing.xml
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\CSharp\ISI-TP1\bin\Debug\Microsoft.Extensions.Primitives.xml
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\CSharp\ISI-TP1\bin\Debug\System.Buffers.xml
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\CSharp\ISI-TP1\bin\Debug\System.Memory.xml
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\CSharp\ISI-TP1\bin\Debug\System.Numerics.Vectors.xml
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\CSharp\ISI-TP1\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\CSharp\ISI-TP1\bin\Debug\System.Text.Encodings.Web.xml
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\CSharp\ISI-TP1\bin\Debug\System.Text.Json.xml
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\CSharp\ISI-TP1\bin\Debug\System.Threading.Tasks.Extensions.xml
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\CSharp\ISI-TP1\bin\Debug\System.ValueTuple.xml
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\CSharp\ISI-TP1\obj\Debug\ISI-TP1.csproj.AssemblyReference.cache
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\CSharp\ISI-TP1\obj\Debug\ISI-TP1.csproj.SuggestedBindingRedirects.cache
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\CSharp\ISI-TP1\obj\Debug\ISI-TP1.csproj.CoreCompileInputs.cache
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\CSharp\ISI-TP1\obj\Debug\ISI-TP1.csproj.CopyComplete
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\CSharp\ISI-TP1\obj\Debug\ISI-TP1.exe
+G:\O meu disco\Documents\Universidade\LESIPL3ano\1Semestre\ISI\TrabalhoPratico\TP1\Source\CSharp\ISI-TP1\obj\Debug\ISI-TP1.pdb
