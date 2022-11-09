@@ -12,5 +12,3 @@ Após a execução das tarefas anteriormente descritas, o *kettle* deverá ser c
 3. Na dashboard do *node-red* serão apresentadas diversas informações relevantes à cerca do dataset utilizado como *input* no projeto de C#
 
 Na dashboard do *node-red*, há também a possibilidade de inserir manualmente um chip. Estes dados são armazenados diretamente na base de dados, numa tabela onde constam apenas os chips inseridos pelo utilizador.
-
-**Criado por Nuno Miguel Carvalho Araújo**

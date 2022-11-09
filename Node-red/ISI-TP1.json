@@ -1,0 +1,1255 @@
+[
+    {
+        "id": "6c699ea8afded8ab",
+        "type": "tab",
+        "label": "ISI-TP1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "ce310c860ebb0644",
+        "type": "mqtt in",
+        "z": "6c699ea8afded8ab",
+        "name": "Chips Subscriber",
+        "topic": "chips/#",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "2dd7c984e6764d7f",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 120,
+        "y": 320,
+        "wires": [
+            [
+                "fbf64223d17c59de",
+                "00f1884e06965139",
+                "49a81b61ca3299aa",
+                "310609a90c22e456"
+            ]
+        ]
+    },
+    {
+        "id": "43ad92b19868264b",
+        "type": "comment",
+        "z": "6c699ea8afded8ab",
+        "name": "mqtt in",
+        "info": "",
+        "x": 90,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "fbf64223d17c59de",
+        "type": "debug",
+        "z": "6c699ea8afded8ab",
+        "name": "payload output",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "jsonata",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 440,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "00f1884e06965139",
+        "type": "debug",
+        "z": "6c699ea8afded8ab",
+        "name": "debug output",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 430,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "d9fdee889074567f",
+        "type": "ui_gauge",
+        "z": "6c699ea8afded8ab",
+        "name": "",
+        "group": "811e8053560960d3",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Higher frequency chip",
+        "label": "MHz",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "5000",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 1080,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "297ebc83725af57d",
+        "type": "ui_chart",
+        "z": "6c699ea8afded8ab",
+        "name": "",
+        "group": "926f70771ae27709",
+        "order": 3,
+        "width": "6",
+        "height": "8",
+        "label": "Number of chips by Foundry",
+        "chartType": "bar",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "Empty data",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": true,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1040,
+        "y": 200,
+        "wires": [
+            []
+        ],
+        "icon": "font-awesome/fa-bar-chart-o"
+    },
+    {
+        "id": "a68cc6f6d5b9e12f",
+        "type": "comment",
+        "z": "6c699ea8afded8ab",
+        "name": "Debugs",
+        "info": "",
+        "x": 410,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "e691b491a61f4b74",
+        "type": "debug",
+        "z": "6c699ea8afded8ab",
+        "name": "Chart data debug",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 790,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "49a81b61ca3299aa",
+        "type": "function",
+        "z": "6c699ea8afded8ab",
+        "name": "Function to count foundries",
+        "func": "var counterGF = flow.get(\"counterGF\") || 0\nvar counterIntel = flow.get(\"counterIntel\") || 0\nvar counterTSMC = flow.get(\"counterTSMC\") || 0\nvar counterUnknown = flow.get(\"counterUnknown\") || 0\nvar counterOther = flow.get(\"counterOther\") || 0\n\nif (msg.topic == \"reset\")\n{\n    counterGF = 0\n    counterIntel = 0\n    counterTSMC = 0\n    counterUnknown = 0\n    counterOther = 0\n}\nelse \n{\n    if (msg.payload.data[0].Foundry == \"GF\") counterGF ++\n    else if (msg.payload.data[0].Foundry == \"Intel\") counterIntel ++  \n    else if (msg.payload.data[0].Foundry == \"TSMC\") counterTSMC ++\n    else if (msg.payload.data[0].Foundry == \"Unknown\") counterUnknown ++ \n    else counterOther ++\n}\n\nflow.set(\"counterGF\", counterGF)\nflow.set(\"counterIntel\", counterIntel)\nflow.set(\"counterTSMC\", counterTSMC)\nflow.set(\"counterUnknown\", counterUnknown)\nflow.set(\"counterOther\", counterOther)\n\nmsg.payload = {\n    \"counterGF\": counterGF,\n    \"counterIntel\": counterIntel, \n    \"counterTSMC\": counterTSMC, \n    \"counterUnknown\": counterUnknown,\n    \"counterOther\": counterOther\n    }\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 200,
+        "wires": [
+            [
+                "e691b491a61f4b74",
+                "f94f9d7370af85f8"
+            ]
+        ]
+    },
+    {
+        "id": "ea62f6071bcba213",
+        "type": "inject",
+        "z": "6c699ea8afded8ab",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "reset",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 420,
+        "wires": [
+            [
+                "49a81b61ca3299aa",
+                "310609a90c22e456",
+                "8f76d8b6f13d7887",
+                "4324110d044288e7",
+                "50181a2280e234b0",
+                "1b6ab2a6de566c96",
+                "829648a89ec620b0",
+                "de1a91c8845a6e59",
+                "f50f1ed5263deebb",
+                "9daf14cef1cb5f91",
+                "c70707c4e245846a",
+                "4395448a2d3c1bda"
+            ]
+        ]
+    },
+    {
+        "id": "70abbddadeee9ae7",
+        "type": "comment",
+        "z": "6c699ea8afded8ab",
+        "name": "Counter different foundries",
+        "info": "",
+        "x": 470,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "f94f9d7370af85f8",
+        "type": "function",
+        "z": "6c699ea8afded8ab",
+        "name": "Chart Creator",
+        "func": "var chart = [{\n    \"data\": [\n        msg.payload.counterGF,\n        msg.payload.counterIntel,\n        msg.payload.counterTSMC,\n        msg.payload.counterUnknown,\n        msg.payload.counterOther],\n    \"labels\": [\"GF\", \"Intel\", \"TSMC\", \"Unknown\", \"Other\"],\n    \"series\":[\"\"],\n}];\n\nmsg.payload = chart;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 780,
+        "y": 200,
+        "wires": [
+            [
+                "297ebc83725af57d"
+            ]
+        ]
+    },
+    {
+        "id": "574d651b5596709a",
+        "type": "ui_gauge",
+        "z": "6c699ea8afded8ab",
+        "name": "",
+        "group": "811e8053560960d3",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Lower frequency chip",
+        "label": "MHz",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "5000",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 1080,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "310609a90c22e456",
+        "type": "function",
+        "z": "6c699ea8afded8ab",
+        "name": "Function to check chips frequency",
+        "func": "var higherFrequency = flow.get(\"higherFrequency\") || 0\nvar lowerFrequency = flow.get(\"lowerFrequency\") || 0\nvar avaregeFrequency = flow.get(\"avaregeFrequency\") || 0\n\nif (msg.topic == \"reset\") {\n    higherFrequency = 0\n    lowerFrequency = 0\n    avaregeFrequency = 0\n}\nelse {\n    if (msg.payload.data[0].Frequency >= higherFrequency)\n    {\n        higherFrequency = msg.payload.data[0].Frequency\n    }\n    if(lowerFrequency == 0)\n    {\n        lowerFrequency = msg.payload.data[0].Frequency\n    }\n    if (msg.payload.data[0].Frequency <= lowerFrequency) {\n        lowerFrequency = msg.payload.data[0].Frequency\n    }\n}\navaregeFrequency = (higherFrequency - lowerFrequency) / 2\n\nflow.set(\"higherFrequency\", higherFrequency)\nflow.set(\"lowerFrequency\", lowerFrequency)\nflow.set(\"avaregeFrequency\", avaregeFrequency)\n\nmsg.payload = {\n    \"higherFrequency\": higherFrequency,\n    \"lowerFrequency\": lowerFrequency,\n    \"avaregeFrequency\": avaregeFrequency\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 320,
+        "wires": [
+            [
+                "ee0867e4710755bf",
+                "d0d5413a1bccfa67",
+                "b53b532037265b5a",
+                "4912f53a8aee4506"
+            ]
+        ]
+    },
+    {
+        "id": "ee0867e4710755bf",
+        "type": "debug",
+        "z": "6c699ea8afded8ab",
+        "name": "Frequency gauges debug",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 810,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "d0d5413a1bccfa67",
+        "type": "change",
+        "z": "6c699ea8afded8ab",
+        "name": "Highest frequency gauge",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "msg.payload.higherFrequency",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 810,
+        "y": 300,
+        "wires": [
+            [
+                "d9fdee889074567f"
+            ]
+        ]
+    },
+    {
+        "id": "b53b532037265b5a",
+        "type": "change",
+        "z": "6c699ea8afded8ab",
+        "name": "Lower frequency gauge",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "msg.payload.lowerFrequency",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 810,
+        "y": 340,
+        "wires": [
+            [
+                "574d651b5596709a"
+            ]
+        ]
+    },
+    {
+        "id": "4912f53a8aee4506",
+        "type": "change",
+        "z": "6c699ea8afded8ab",
+        "name": "Avarege frequency gauge",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "msg.payload.avaregeFrequency",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 810,
+        "y": 380,
+        "wires": [
+            [
+                "88bb0d62a15d06ee"
+            ]
+        ]
+    },
+    {
+        "id": "88bb0d62a15d06ee",
+        "type": "ui_gauge",
+        "z": "6c699ea8afded8ab",
+        "name": "",
+        "group": "811e8053560960d3",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Avarege freguency",
+        "label": "MHz",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "5000",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 1070,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "9daf14cef1cb5f91",
+        "type": "ui_slider",
+        "z": "6c699ea8afded8ab",
+        "name": "",
+        "label": "Frequency",
+        "tooltip": "",
+        "group": "918d55b97c85a525",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "frequency",
+        "topicType": "msg",
+        "min": 0,
+        "max": "5000",
+        "step": "100",
+        "className": "[{\"id\":\"4bc92110.64406\",\"type\":\"ui_template\",\"z\":\"7993e570.4aafac\",\"group\":\"93892d22.50ab8\",\"name\":\"\",\"order\":3,\"width\":0,\"height\":0,\"format\":\"<style>\\nmd-slider[md-discrete] .md-sign,\\nmd-slider[md-discrete] .md-sign:after {\\n opacity: 1;\\n -webkit-transform: translate3d(0, 0, 0) scale(1);\\n transform: translate3d(0, 0, 0) scale(1);\\n}\\n</style>\",\"storeOutMessages\":true,\"fwdInMessages\":true,\"templateScope\":\"global\",\"x\":660,\"y\":320,\"wires\":[[]]},{\"id\":\"992bc11f.dc2a4\",\"type\":\"ui_slider\",\"z\":\"7993e570.4aafac\",\"name\":\"\",\"label\":\"slider\",\"tooltip\":\"\",\"group\":\"93892d22.50ab8\",\"order\":4,\"width\":0,\"height\":0,\"passthru\":true,\"outs\":\"end\",\"topic\":\"\",\"min\":0,\"max\":10,\"step\":1,\"x\":650,\"y\":360,\"wires\":[[]]},{\"id\":\"93892d22.50ab8\",\"type\":\"ui_group\",\"z\":\"\",\"name\":\"charts\",\"tab\":\"a24618c5.be59c8\",\"disp\":true,\"width\":\"14\",\"collapse\":false},{\"id\":\"a24618c5.be59c8\",\"type\":\"ui_tab\",\"z\":\"\",\"name\":\"tab 1\",\"icon\":\"weekend\",\"order\":1,\"disabled\":false,\"hidden\":false}]",
+        "x": 430,
+        "y": 720,
+        "wires": [
+            [
+                "02d4ad30577c1d83"
+            ]
+        ]
+    },
+    {
+        "id": "4324110d044288e7",
+        "type": "ui_dropdown",
+        "z": "6c699ea8afded8ab",
+        "name": "",
+        "label": "Type",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "918d55b97c85a525",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "CPU",
+                "value": "CPU",
+                "type": "str"
+            },
+            {
+                "label": "GPU",
+                "value": "GPU",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "type",
+        "topicType": "msg",
+        "className": "",
+        "x": 410,
+        "y": 480,
+        "wires": [
+            [
+                "286a19876a823919"
+            ]
+        ]
+    },
+    {
+        "id": "4395448a2d3c1bda",
+        "type": "ui_button",
+        "z": "6c699ea8afded8ab",
+        "name": "",
+        "group": "918d55b97c85a525",
+        "order": 10,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "GO",
+        "tooltip": "",
+        "color": "#FFFFFF",
+        "bgcolor": "#2E86C1",
+        "className": "",
+        "icon": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "go",
+        "topicType": "msg",
+        "x": 410,
+        "y": 800,
+        "wires": [
+            [
+                "720016c69aaaa87f"
+            ]
+        ]
+    },
+    {
+        "id": "829648a89ec620b0",
+        "type": "ui_slider",
+        "z": "6c699ea8afded8ab",
+        "name": "",
+        "label": "TDP",
+        "tooltip": "",
+        "group": "918d55b97c85a525",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "tdp",
+        "topicType": "msg",
+        "min": 0,
+        "max": "500",
+        "step": "5",
+        "className": "[{\"id\":\"4bc92110.64406\",\"type\":\"ui_template\",\"z\":\"7993e570.4aafac\",\"group\":\"93892d22.50ab8\",\"name\":\"\",\"order\":3,\"width\":0,\"height\":0,\"format\":\"<style>\\nmd-slider[md-discrete] .md-sign,\\nmd-slider[md-discrete] .md-sign:after {\\n opacity: 1;\\n -webkit-transform: translate3d(0, 0, 0) scale(1);\\n transform: translate3d(0, 0, 0) scale(1);\\n}\\n</style>\",\"storeOutMessages\":true,\"fwdInMessages\":true,\"templateScope\":\"global\",\"x\":660,\"y\":320,\"wires\":[[]]},{\"id\":\"992bc11f.dc2a4\",\"type\":\"ui_slider\",\"z\":\"7993e570.4aafac\",\"name\":\"\",\"label\":\"slider\",\"tooltip\":\"\",\"group\":\"93892d22.50ab8\",\"order\":4,\"width\":0,\"height\":0,\"passthru\":true,\"outs\":\"end\",\"topic\":\"\",\"min\":0,\"max\":10,\"step\":1,\"x\":650,\"y\":360,\"wires\":[[]]},{\"id\":\"93892d22.50ab8\",\"type\":\"ui_group\",\"z\":\"\",\"name\":\"charts\",\"tab\":\"a24618c5.be59c8\",\"disp\":true,\"width\":\"14\",\"collapse\":false},{\"id\":\"a24618c5.be59c8\",\"type\":\"ui_tab\",\"z\":\"\",\"name\":\"tab 1\",\"icon\":\"weekend\",\"order\":1,\"disabled\":false,\"hidden\":false}]",
+        "x": 410,
+        "y": 600,
+        "wires": [
+            [
+                "fa98084bfb3ea2d7"
+            ]
+        ]
+    },
+    {
+        "id": "c70707c4e245846a",
+        "type": "ui_dropdown",
+        "z": "6c699ea8afded8ab",
+        "name": "",
+        "label": "Foundry",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "918d55b97c85a525",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "GF",
+                "value": "GF",
+                "type": "str"
+            },
+            {
+                "label": "Intel",
+                "value": "Intel",
+                "type": "str"
+            },
+            {
+                "label": "TSMC",
+                "value": "TSMC",
+                "type": "str"
+            },
+            {
+                "label": "Unknown",
+                "value": "Unknown",
+                "type": "str"
+            },
+            {
+                "label": "Other",
+                "value": "Other",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "foundry",
+        "topicType": "msg",
+        "className": "",
+        "x": 420,
+        "y": 760,
+        "wires": [
+            [
+                "f0387164f9bd13d3"
+            ]
+        ]
+    },
+    {
+        "id": "f7f3e20e9bb84d85",
+        "type": "comment",
+        "z": "6c699ea8afded8ab",
+        "name": "Reset flow variables",
+        "info": "",
+        "x": 130,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "29deb655e4beb3dc",
+        "type": "debug",
+        "z": "6c699ea8afded8ab",
+        "name": "True",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1250,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "b3bac3bbfbcab1a0",
+        "type": "comment",
+        "z": "6c699ea8afded8ab",
+        "name": "Calculate chips frequency",
+        "info": "",
+        "x": 470,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "54a1fec4a53789f8",
+        "type": "comment",
+        "z": "6c699ea8afded8ab",
+        "name": "Chip inserter",
+        "info": "",
+        "x": 430,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "b604e19615470c8c",
+        "type": "change",
+        "z": "6c699ea8afded8ab",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "chip",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1080,
+        "y": 580,
+        "wires": [
+            [
+                "85e97ece652bc1ce"
+            ]
+        ]
+    },
+    {
+        "id": "f0387164f9bd13d3",
+        "type": "change",
+        "z": "6c699ea8afded8ab",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "chip.foundry",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 700,
+        "y": 760,
+        "wires": [
+            [
+                "b604e19615470c8c"
+            ]
+        ]
+    },
+    {
+        "id": "286a19876a823919",
+        "type": "change",
+        "z": "6c699ea8afded8ab",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "chip.type",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 690,
+        "y": 480,
+        "wires": [
+            [
+                "b604e19615470c8c"
+            ]
+        ]
+    },
+    {
+        "id": "02d4ad30577c1d83",
+        "type": "change",
+        "z": "6c699ea8afded8ab",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "chip.frequency",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 700,
+        "y": 720,
+        "wires": [
+            [
+                "b604e19615470c8c"
+            ]
+        ]
+    },
+    {
+        "id": "fa98084bfb3ea2d7",
+        "type": "change",
+        "z": "6c699ea8afded8ab",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "chip.tdp",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 680,
+        "y": 600,
+        "wires": [
+            [
+                "b604e19615470c8c"
+            ]
+        ]
+    },
+    {
+        "id": "720016c69aaaa87f",
+        "type": "change",
+        "z": "6c699ea8afded8ab",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "chip.go",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 720,
+        "y": 800,
+        "wires": [
+            [
+                "b604e19615470c8c"
+            ]
+        ]
+    },
+    {
+        "id": "8f76d8b6f13d7887",
+        "type": "ui_text_input",
+        "z": "6c699ea8afded8ab",
+        "name": "",
+        "label": "Product",
+        "tooltip": "",
+        "group": "918d55b97c85a525",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "product",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 420,
+        "y": 440,
+        "wires": [
+            [
+                "fa893eb10b5cd691"
+            ]
+        ]
+    },
+    {
+        "id": "50181a2280e234b0",
+        "type": "ui_date_picker",
+        "z": "6c699ea8afded8ab",
+        "name": "",
+        "label": "Release Date",
+        "group": "918d55b97c85a525",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "topic": "date",
+        "topicType": "msg",
+        "className": "",
+        "x": 440,
+        "y": 520,
+        "wires": [
+            [
+                "adda1b50d1e40be1"
+            ]
+        ]
+    },
+    {
+        "id": "1b6ab2a6de566c96",
+        "type": "ui_slider",
+        "z": "6c699ea8afded8ab",
+        "name": "",
+        "label": "Process Size",
+        "tooltip": "",
+        "group": "918d55b97c85a525",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "processSize",
+        "topicType": "msg",
+        "min": 0,
+        "max": "500",
+        "step": "1",
+        "className": "[{\"id\":\"4bc92110.64406\",\"type\":\"ui_template\",\"z\":\"7993e570.4aafac\",\"group\":\"93892d22.50ab8\",\"name\":\"\",\"order\":3,\"width\":0,\"height\":0,\"format\":\"<style>\\nmd-slider[md-discrete] .md-sign,\\nmd-slider[md-discrete] .md-sign:after {\\n opacity: 1;\\n -webkit-transform: translate3d(0, 0, 0) scale(1);\\n transform: translate3d(0, 0, 0) scale(1);\\n}\\n</style>\",\"storeOutMessages\":true,\"fwdInMessages\":true,\"templateScope\":\"global\",\"x\":660,\"y\":320,\"wires\":[[]]},{\"id\":\"992bc11f.dc2a4\",\"type\":\"ui_slider\",\"z\":\"7993e570.4aafac\",\"name\":\"\",\"label\":\"slider\",\"tooltip\":\"\",\"group\":\"93892d22.50ab8\",\"order\":4,\"width\":0,\"height\":0,\"passthru\":true,\"outs\":\"end\",\"topic\":\"\",\"min\":0,\"max\":10,\"step\":1,\"x\":650,\"y\":360,\"wires\":[[]]},{\"id\":\"93892d22.50ab8\",\"type\":\"ui_group\",\"z\":\"\",\"name\":\"charts\",\"tab\":\"a24618c5.be59c8\",\"disp\":true,\"width\":\"14\",\"collapse\":false},{\"id\":\"a24618c5.be59c8\",\"type\":\"ui_tab\",\"z\":\"\",\"name\":\"tab 1\",\"icon\":\"weekend\",\"order\":1,\"disabled\":false,\"hidden\":false}]",
+        "x": 430,
+        "y": 560,
+        "wires": [
+            [
+                "5fdf71a1a97c4676"
+            ]
+        ]
+    },
+    {
+        "id": "de1a91c8845a6e59",
+        "type": "ui_slider",
+        "z": "6c699ea8afded8ab",
+        "name": "",
+        "label": "Die Size",
+        "tooltip": "",
+        "group": "918d55b97c85a525",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "dieSize",
+        "topicType": "msg",
+        "min": 0,
+        "max": "500",
+        "step": "1",
+        "className": "[{\"id\":\"4bc92110.64406\",\"type\":\"ui_template\",\"z\":\"7993e570.4aafac\",\"group\":\"93892d22.50ab8\",\"name\":\"\",\"order\":3,\"width\":0,\"height\":0,\"format\":\"<style>\\nmd-slider[md-discrete] .md-sign,\\nmd-slider[md-discrete] .md-sign:after {\\n opacity: 1;\\n -webkit-transform: translate3d(0, 0, 0) scale(1);\\n transform: translate3d(0, 0, 0) scale(1);\\n}\\n</style>\",\"storeOutMessages\":true,\"fwdInMessages\":true,\"templateScope\":\"global\",\"x\":660,\"y\":320,\"wires\":[[]]},{\"id\":\"992bc11f.dc2a4\",\"type\":\"ui_slider\",\"z\":\"7993e570.4aafac\",\"name\":\"\",\"label\":\"slider\",\"tooltip\":\"\",\"group\":\"93892d22.50ab8\",\"order\":4,\"width\":0,\"height\":0,\"passthru\":true,\"outs\":\"end\",\"topic\":\"\",\"min\":0,\"max\":10,\"step\":1,\"x\":650,\"y\":360,\"wires\":[[]]},{\"id\":\"93892d22.50ab8\",\"type\":\"ui_group\",\"z\":\"\",\"name\":\"charts\",\"tab\":\"a24618c5.be59c8\",\"disp\":true,\"width\":\"14\",\"collapse\":false},{\"id\":\"a24618c5.be59c8\",\"type\":\"ui_tab\",\"z\":\"\",\"name\":\"tab 1\",\"icon\":\"weekend\",\"order\":1,\"disabled\":false,\"hidden\":false}]",
+        "x": 420,
+        "y": 640,
+        "wires": [
+            [
+                "44a9d355a811fbc7"
+            ]
+        ]
+    },
+    {
+        "id": "f50f1ed5263deebb",
+        "type": "ui_slider",
+        "z": "6c699ea8afded8ab",
+        "name": "",
+        "label": "Transistors",
+        "tooltip": "",
+        "group": "918d55b97c85a525",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "transistors",
+        "topicType": "msg",
+        "min": 0,
+        "max": "500",
+        "step": "1",
+        "className": "[{\"id\":\"4bc92110.64406\",\"type\":\"ui_template\",\"z\":\"7993e570.4aafac\",\"group\":\"93892d22.50ab8\",\"name\":\"\",\"order\":3,\"width\":0,\"height\":0,\"format\":\"<style>\\nmd-slider[md-discrete] .md-sign,\\nmd-slider[md-discrete] .md-sign:after {\\n opacity: 1;\\n -webkit-transform: translate3d(0, 0, 0) scale(1);\\n transform: translate3d(0, 0, 0) scale(1);\\n}\\n</style>\",\"storeOutMessages\":true,\"fwdInMessages\":true,\"templateScope\":\"global\",\"x\":660,\"y\":320,\"wires\":[[]]},{\"id\":\"992bc11f.dc2a4\",\"type\":\"ui_slider\",\"z\":\"7993e570.4aafac\",\"name\":\"\",\"label\":\"slider\",\"tooltip\":\"\",\"group\":\"93892d22.50ab8\",\"order\":4,\"width\":0,\"height\":0,\"passthru\":true,\"outs\":\"end\",\"topic\":\"\",\"min\":0,\"max\":10,\"step\":1,\"x\":650,\"y\":360,\"wires\":[[]]},{\"id\":\"93892d22.50ab8\",\"type\":\"ui_group\",\"z\":\"\",\"name\":\"charts\",\"tab\":\"a24618c5.be59c8\",\"disp\":true,\"width\":\"14\",\"collapse\":false},{\"id\":\"a24618c5.be59c8\",\"type\":\"ui_tab\",\"z\":\"\",\"name\":\"tab 1\",\"icon\":\"weekend\",\"order\":1,\"disabled\":false,\"hidden\":false}]",
+        "x": 430,
+        "y": 680,
+        "wires": [
+            [
+                "13c6c13b61c491ad"
+            ]
+        ]
+    },
+    {
+        "id": "fa893eb10b5cd691",
+        "type": "change",
+        "z": "6c699ea8afded8ab",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "chip.product",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 700,
+        "y": 440,
+        "wires": [
+            [
+                "b604e19615470c8c"
+            ]
+        ]
+    },
+    {
+        "id": "adda1b50d1e40be1",
+        "type": "change",
+        "z": "6c699ea8afded8ab",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "chip.date",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 690,
+        "y": 520,
+        "wires": [
+            [
+                "b604e19615470c8c"
+            ]
+        ]
+    },
+    {
+        "id": "5fdf71a1a97c4676",
+        "type": "change",
+        "z": "6c699ea8afded8ab",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "chip.processSize",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 710,
+        "y": 560,
+        "wires": [
+            [
+                "b604e19615470c8c"
+            ]
+        ]
+    },
+    {
+        "id": "44a9d355a811fbc7",
+        "type": "change",
+        "z": "6c699ea8afded8ab",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "chip.dieSize",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 700,
+        "y": 640,
+        "wires": [
+            [
+                "b604e19615470c8c"
+            ]
+        ]
+    },
+    {
+        "id": "13c6c13b61c491ad",
+        "type": "change",
+        "z": "6c699ea8afded8ab",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "chip.transistors",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 710,
+        "y": 680,
+        "wires": [
+            [
+                "b604e19615470c8c"
+            ]
+        ]
+    },
+    {
+        "id": "ad6a5ffb4bc26b93",
+        "type": "comment",
+        "z": "6c699ea8afded8ab",
+        "name": "Creating object from input",
+        "info": "",
+        "x": 1110,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "85e97ece652bc1ce",
+        "type": "function",
+        "z": "6c699ea8afded8ab",
+        "name": "Function to check object format",
+        "func": "if (msg.topic == \"reset\") msg.payload.go = false\nif(msg.payload.go == true) return msg\nelse{\n    msg.payload = \"INCORRECT FORMAT\"\n    return msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1330,
+        "y": 580,
+        "wires": [
+            [
+                "fd9f50246add2f1b"
+            ]
+        ]
+    },
+    {
+        "id": "fd9f50246add2f1b",
+        "type": "switch",
+        "z": "6c699ea8afded8ab",
+        "name": "",
+        "property": "payload.go",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1070,
+        "y": 640,
+        "wires": [
+            [
+                "29deb655e4beb3dc",
+                "a52c66e24b27b1aa"
+            ],
+            [
+                "35be270d7708fb85"
+            ]
+        ]
+    },
+    {
+        "id": "35be270d7708fb85",
+        "type": "debug",
+        "z": "6c699ea8afded8ab",
+        "name": "False",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1250,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "a52c66e24b27b1aa",
+        "type": "mongodb out",
+        "z": "6c699ea8afded8ab",
+        "mongodb": "16ac3deb92e30137",
+        "name": "",
+        "collection": "ChipsUser",
+        "payonly": true,
+        "upsert": false,
+        "multi": false,
+        "operation": "insert",
+        "x": 1350,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "2dd7c984e6764d7f",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "811e8053560960d3",
+        "type": "ui_group",
+        "name": "Chips Frequency",
+        "tab": "a9421575b5696164",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "926f70771ae27709",
+        "type": "ui_group",
+        "name": "Chips",
+        "tab": "a9421575b5696164",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "918d55b97c85a525",
+        "type": "ui_group",
+        "name": "Chip Inserter",
+        "tab": "a9421575b5696164",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "16ac3deb92e30137",
+        "type": "mongodb",
+        "hostname": "localhost",
+        "topology": "direct",
+        "connectOptions": "",
+        "port": "27017",
+        "db": "ChipsDataSet",
+        "name": ""
+    },
+    {
+        "id": "a9421575b5696164",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
